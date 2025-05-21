@@ -27,7 +27,7 @@ export default withMermaid({
     //['link', { rel: 'icon', type: 'image/png', href: '/img/logo.png' }]
   ],
   themeConfig: {
-    siteTitle: 'Funcions',
+    siteTitle: 'POO I',
     logo: '/img/logo.png',
     nav: [
       { text: '🏠 Inici', link: '/' },
