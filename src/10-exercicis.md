@@ -143,7 +143,7 @@ Corregeix el main per a utilitzar els getters i setters. Prova a instanciar dive
 
 <div style="flex: 0.8; padding: 10px;">
 
-![Classe Punt](uf7/Classe_punto.jpg)
+![Classe Punt](/uf7/Classe_punto.jpg)
 
 </div>
 </div>
@@ -171,7 +171,7 @@ Corregeix el main per a utilitzar els getters i setters. Prova a instanciar dive
 
 <div style="flex: 0.3; padding: 10px;">
 
-![Exercici C3](uf7/ExerciciC3.jpg)
+![Exercici C3](/uf7/ExerciciC3.jpg)
 
 </div>
 </div>

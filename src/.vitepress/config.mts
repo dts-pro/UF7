@@ -5,10 +5,10 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   lang: 'ca-ES',
-  title: 'UF7 - Programació Orientada a Objectes I',
+  title: 'UF7',
   description: 'Descripció',
-  base: '/',
-  outDir: './dist',
+  base: '/UF7/',
+  outDir: '../docs',
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
@@ -70,8 +70,8 @@ export default withMermaid({
         { text: 'Tipus enumerat', link: '/11-add_enum' },
         { text: 'Mètode toString', link: '/12-add_tostring' },
         { text: 'Exemple conjunt', link: '/13-exemple' },
-        { text: '<img src="/img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
-        { text: '<img src="/img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
+        { text: '<img src="img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
+        { text: '<img src="img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
       ]}
     ],
     socialLinks: [

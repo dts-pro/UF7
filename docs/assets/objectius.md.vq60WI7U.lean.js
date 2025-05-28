@@ -1,0 +1,1 @@
+import{_ as a,c as i,o as t,a0 as r}from"./chunks/framework.gQTvNS1f.js";const m=JSON.parse('{"title":"Objectius","description":"","frontmatter":{},"headers":[],"relativePath":"objectius.md","filePath":"objectius.md"}'),s={name:"objectius.md"};function l(n,e,c,o,d,u){return t(),i("div",null,e[0]||(e[0]=[r("",2)]))}const b=a(s,[["render",l]]);export{m as __pageData,b as default};

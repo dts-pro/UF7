@@ -4,7 +4,7 @@
 
 En aquest exemple implementarem la classe Articles. Aquesta classe representa cada objecte amb els següents atributs: codi_article, titol, format i preu_alquiler. També defineix tres mètodes que permeten calcular, respectivament, el preu de lloguer d'un dia, de dos dies i una setmana. El primer que necessitarem, i això ho farem per cada classe que necessitem en tots els exemples, serà crear-nos una nova classe a Java. Per a això punxarem amb el botó dret sobre el paquet on anem a tindre les classes i després en NEW > Java Class. Crearem una classe anomenada Article.
 
-![Crear una nova classe](uf7/nova_classe.jpg)
+![Crear una nova classe](/uf7/nova_classe.jpg)
 
 ```java
 public class Article{
@@ -88,7 +88,7 @@ En aquest exemple anem a implementar la classe Cuadrado, que representa quadrats
 
 El criteri de representació pren les coordenades horitzontals (x) creixents d'esquerra a dreta, i les verticals (y) creixents de dalt a baix.
 
-![Coordenades de dos punts](uf7/coordenades.jpg)
+![Coordenades de dos punts](/uf7/coordenades.jpg)
 
 El codi de Quadrat.java seria:
 
@@ -405,7 +405,7 @@ public class Exemples{
 
 I l'eixida seria
 
-![Eixida exemple 6](uf7/eixida_exemple_6.jpg)
+![Eixida exemple 6](/uf7/eixida_exemple_6.jpg)
 
 ## 9.7. Exemples d'ampliació
 
