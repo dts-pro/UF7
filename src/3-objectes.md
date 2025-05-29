@@ -9,25 +9,40 @@ Quan creem una classe definim un nou tipus de dades que pot utilitzar-se per a i
 
 Per exemple, suposant que ja hem creat la classe Poal:
 
+::: tabs
+== Java
+
 ```java
 Poal p1; // Crea una variable referència anomenada p1 de tipus Poal 
 p1 = new Poal(); // Crea un objecte Poal i l'assigna a p1
 ```
 
+:::
+
 També pot fer-se tot en una sola línia de codi:
+
+::: tabs
+== Java
 
 ```java
 Poal p1 = new Poal();
 ```
 
+:::
+
 ## 3.2. Assignació de variables de referència a objectes
 
 Les variables de referència a objectes permeten accedir a l'objecte (són una referència a l'objecte, no l'objecte). Per això, actuen de manera diferent al que caldria esperar quan té lloc una assignació. Per exemple, què fa el següent fragment de codi?
+
+::: tabs
+== Java
 
 ```java
 Poal p1 = new Poal(); 
 Poal p2 = p1;
 ```
+
+:::
 
 Podríem pensar que a p2 se li assigna una còpia de l'objecte p1, però no és així. El que succeeix és que la referència p1 es copia en p2, per la qual cosa p2 permetrà accedir al mateix objecte referenciat per p1. Per tant qualsevol canvi que es faça a l'objecte referenciat a través de p2 afectarà l'objecte al qual referencia p1.
 

@@ -17,6 +17,6 @@ En definir una classe el que es fa és indicar com funciona un determinat tipus 
 Les propietats de la POO són la següents:
 
 - **Encapsulament**. Una classe es compon tant de variables (atributs) com de funcions i procediments (mètodes). De fet no es poden definir variables (ni funcions) fora d'una classe (és a dir no hi ha variables globals).
-- **Abstracció**. Cal crear versions simplificades dels objectes i classes del mon real. També s’estableixen zones ocultes en definir la classes (zona privada) que només són utilitzades per aquesta classe i per alguna classe relacionada. Hi ha zones pública (anomenada també interfície de la classe) que poden ser utilitzades per qualsevol part del codi.
+- **Abstracció**. Cal crear versions simplificades dels objectes i classes del mon real. També s'estableixen zones ocultes en definir la classes (zona privada) que només són utilitzades per aquesta classe i per alguna classe relacionada. Hi ha zones pública (anomenada també interfície de la classe) que poden ser utilitzades per qualsevol part del codi.
 - **Polimorfisme**. Cada mètode d'una classe pot tindre diverses definicions diferents. En el cas del joc parxís: partida.començar(4) comença una partida per a quatre jugadors, partida.començar(roig, blau) comença una partida de dos jugadors per als colors roig i blau; aquestes són dues formes diferents d'emprar el mètode començar, que és polimòrfic.
-- **Herència**. Una classe es pot definir a partir d’una altra ja existent. D’aquesta forma, la nova classe pot heretar propietats (atributs i mètodes) de l’altra.
+- **Herència**. Una classe es pot definir a partir d'una altra ja existent. D'aquesta forma, la nova classe pot heretar propietats (atributs i mètodes) de l'altra.

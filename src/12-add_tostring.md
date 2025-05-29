@@ -6,6 +6,12 @@ Exemple del comportament per defecte (sense sobreescriure)
 
 Si no es sobrescriu, el mètode toString retorna una representació genèrica que pot no ser útil. Per exemple:
 
+:::: tabs
+=== Java
+
+::: tabs
+== Classe Persona
+
 ```java
 public class Persona {
     String nom;
@@ -16,7 +22,11 @@ public class Persona {
         this.edat = edat;
     }
 }
+```
 
+== Classe principal
+
+```java
 public class Main {
     public static void main(String[] args) {
         Persona p = new Persona("Anna", 25);
@@ -25,7 +35,16 @@ public class Main {
 }
 ```
 
+:::
+::::
+
 Per obtenir una representació més clara, es pot sobrescriure el mètode toString:
+
+:::: tabs
+=== Java
+
+::: tabs
+== Classe Persona
 
 ```java
 public class Persona {
@@ -42,7 +61,11 @@ public class Persona {
         return "Persona [nom=" + nom + ", edat=" + edat + "]";
     }
 }
+```
 
+== Classe principal
+
+```java
 public class Main {
     public static void main(String[] args) {
         Persona p = new Persona("Anna", 25);
@@ -50,6 +73,9 @@ public class Main {
     }
 }
 ```
+
+:::
+::::
 
 En java, `@Override` és una anotació que s'utilitza per indicar que un mètode en una classe està sobreescrivint un mètode definit a la classe pare o a una interfície implementada. Serveix per deixar clar que el mètode definit no és nou, sinó que modifica el comportament d'un mètode heretat.
 

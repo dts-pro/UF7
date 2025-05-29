@@ -6,6 +6,9 @@ En aquest exemple implementarem la classe Articles. Aquesta classe representa ca
 
 ![Crear una nova classe](/uf7/nova_classe.jpg)
 
+::: tabs
+== Java
+
 ```java
 public class Article{
   //Atributs de la classe
@@ -37,11 +40,19 @@ public class Article{
 }
 ```
 
-El mètode precio1 retorna el valor del preu de lloguer de l'article. El mètode precio2 calcula el preu de lloguer de dos dies fent un descompte del 20% (per això es multiplica per 1,8). Per últim el mètode precio_semana calcula el preu d'una setmana multiplicant per 5 el preu de lloguer.
+:::
+
+El mètode preu1 retorna el valor del preu de lloguer de l'article. El mètode preu2 calcula el preu de lloguer de dos dies fent un descompte del 20% (per això es multiplica per 1,8). Per últim el mètode preu_setmana calcula el preu d'una setmana multiplicant per 5 el preu de lloguer.
 
 Crearem una classe nova anomenada Exemples, amb la funció public static void main, on anem a instanciar (crear) objectes de Article i utilitzar-los. Amb l'operador new crearem una instància de la classe Article. Com de moment la classe no té constructors s'invocarà al constructor per defecte de la classe.
 
 **<u>RECORDA</u>**: Quan instanciem una classe estem creant un objecte d'aquesta classe.
+
+:::: tabs
+=== Java
+
+::: tabs
+== Codi
 
 ```java
 public class Exemples{
@@ -71,7 +82,7 @@ public class Exemples{
 }
 ```
 
-I l'eixida:
+== Eixida:
 
 ```plaintext
 Alquiler Art. 001, 1 dia: 2.5
@@ -82,6 +93,9 @@ Alquiler Art. 002, 2 dies: 5.3999996
 Alquiler Art. 002, 1 setmana: 15.0
 ```
 
+:::
+::::
+
 ## 9.2. Exemple 2
 
 En aquest exemple anem a implementar la classe Cuadrado, que representa quadrats mitjançant dues coordenades 2D, i defineix tres mètodes que permeten calcular, respectivament, la diagonal, el perímetre i l'àrea.
@@ -90,7 +104,11 @@ El criteri de representació pren les coordenades horitzontals (x) creixents d'e
 
 ![Coordenades de dos punts](/uf7/coordenades.jpg)
 
-El codi de Quadrat.java seria:
+:::: tabs
+=== Java
+
+::: tabs
+== Quadrat.java
 
 ```java
 public class Quadrat{
@@ -118,7 +136,7 @@ public class Quadrat{
 
 ```
 
-El codi de Exemples.java seria:
+== Exemples.java
 
 ```java
 public class Exemples{
@@ -139,7 +157,7 @@ public class Exemples{
 }
 ```
 
-I l'eixida:
+== Eixida
 
 ```plaintext
 El perímetre del quadrat 1 és: 8.0
@@ -147,6 +165,9 @@ L'àrea del quadrat 1 és: 4.00000000000001
 El perímetre del quadrat 2 és: 16.0
 L'àrea del quadrat 2 és: 16.00000000000004
 ```
+
+:::
+::::
 
 ## 9.3. Exemple 3
 
@@ -157,7 +178,11 @@ Però ara no podrem llegir ni modificar els atributs de la classe des de fora d'
 - Crearem mètodes public (un per atribut) que ens retorne el valor de cada atribut. A això se'n diu mètodes **get** o **getters** (de l'anglés agafar).
 - De la mateixa manera, mètodes que ens permeten modificar el valor dels atributs. A això se'n diu mètodes **set** o **setters** (de l'anglés establir). En l'exemple es diu modificaValors i permet canviar tots els valors en una sola crida.
 
-El codi de Article.java seria:
+:::: tabs
+=== Java
+
+::: tabs
+== Article.java
 
 ```java
 public class Article{
@@ -213,7 +238,7 @@ public class Article{
 }
 ```
 
-El codi de Exemples.java seria:
+== Exemples.java
 
 ```java
 public class Exemples{
@@ -236,7 +261,7 @@ public class Exemples{
 }
 ```
 
-I l'eixida:
+== Eixida
 
 ```plaintext
 Alquiler Art. 001, 1 dia: 2.5
@@ -247,11 +272,18 @@ Alquiler Art. 002, 2 dies: 5.3999996
 Alquiler Art. 002, 1 setmana: 15.0
 ```
 
+:::
+::::
+
 ## 9.4. Exemple 4
 
 En aquest exemple veurem com crear un constructor de classe. Per a això ens basarem en la classe Article creada anteriorment i li afegirem el constructor.
 
-El codi de Article.java:
+:::: tabs
+=== Java
+
+::: tabs
+== Article.java
 
 ```java
 public class Article{
@@ -316,7 +348,8 @@ public class Article{
 }
 ```
 
-Ara en Exemples.java utilitzem el constructor (al instanciar l'objecte amb new). Això permet instanciar l'objecte i definir atributs en una sola instrucció.
+::: tabs
+== Exemples.java
 
 ```java
 public class Exemples{
@@ -335,7 +368,9 @@ public class Exemples{
 }
 ```
 
-I l'eixida:
+Ara en Exemples.java utilitzem el constructor (al instanciar l'objecte amb new). Això permet instanciar l'objecte i definir atributs en una sola instrucció.
+
+== Eixida
 
 ```plaintext
 Alquiler Art. 001, 1 dia: 2.5
@@ -345,6 +380,9 @@ Alquiler Art. 002, 1 dia: 3.0
 Alquiler Art. 002, 2 dies: 5.3999996
 Alquiler Art. 002, 1 setmana: 15.0
 ```
+
+:::
+::::
 
 ## 9.5. Exemple 5
 
@@ -356,21 +394,36 @@ Per a il·lustrar l'ús dels qualificadors **final** i **static** dins de la nos
 
 Definirem IVA com static i final, podrem accedir al seu valor mitjançant l'expressió Article.IVA, sense necessitat d'haver creat cap objecte de la classe Article:
 
+::: tabs
+== Java
+
 ```java
 public static final double IVA = 0.16;
 ```
 
+:::
+
 L'atribut privat amb el número d'instància, en realitat, es tracta d'una variable global accessible per a tots els objectes de tipus Article:
+
+::: tabs
+== Java
 
 ```java
 private static int numero = 0;
 ```
 
+:::
+
 I finalment, l'identificador constant de cada objecte s'indica amb un especificador final en la seua descripció.
+
+::: tabs
+== Java
 
 ```java
 final String identificador;
 ```
+
+:::
 
 Es deixa com a exercici proposat fer aquests canvis i provar-ho.
 
@@ -380,7 +433,15 @@ En aquest exemple crearem un array (vector) que continga deu objectes de tipus A
 
 Primer creem un vector de Articles anomenat elsMeusArticles (és un array de referències a objectes Article). Després instànciarem els 10 objectes, guardant cadascun dels objectes referenciats.
 
-La classe Article no es veuria modificada. El codi d'Exemples quedaria així:
+:::: tabs
+=== Java
+
+::: tabs
+== Article.java
+
+La classe Article no es veuria modificada.
+
+== Exemples.java
 
 ```java
 public class Exemples{
@@ -403,9 +464,12 @@ public class Exemples{
 }
 ```
 
-I l'eixida seria
+== Eixida
 
 ![Eixida exemple 6](/uf7/eixida_exemple_6.jpg)
+
+:::
+::::
 
 ## 9.7. Exemples d'ampliació
 
@@ -413,12 +477,16 @@ I l'eixida seria
 
 Programa que crea gossos i descriu el seu comportament.
 
-1. **Classe Gos**
+:::: tabs
+=== Java
+
+::: tabs
+== Classe Gos
 
 ```java
-package UF08_Exemple01;
+package UF07_Exemple01;
 /**
-* UF08 Exemple 01: Classe Gos
+* UF07 Exemple 01: Classe Gos
 */
 public class Gos {
  
@@ -470,12 +538,12 @@ public class Gos {
 }
 ```
 
-2. **Programa Principal**
+== Programa principal
 
 ```java
-package UF08_Exemple01;
+package UF07_Exemple01;
 /**
-* UF08 Exemple 01: Programa que crea gossos i descriu el seu comportament
+* UF07 Exemple 01: Programa que crea gossos i descriu el seu comportament
 */
 public class ProgramaGossos {
     public static void main(String[] args) {
@@ -507,6 +575,9 @@ public class ProgramaGossos {
 }
 ```
 
+:::
+::::
+
 ## Exemple d'ampliació 2
 
 Programa que gestiona contenidors de líquid i permet passar líquid d'un al altre tenint en compte la capacitat lliure del segon contenidor.
@@ -516,16 +587,20 @@ Cada cub es podrà crear amb una capacitat.
 
 Tindrem mètodes setter per a plenar el contenidor(plenaContenidor), actualitzar el contingut del contenidor amb un número de litres (actualitzaContenidor) o buidar completament el contenidor (buidaContenidor) i getter que ens donarà els litres de capacitat i contingut (mostraCapacita i mostra Contingut).
 
-Tindrem un mètode per a passar litres d’un contenidor a altre (passaContingut) de forma que si cap es passa tot i sinó es passa sols el que es puga fins que quede ple el segon.
+Tindrem un mètode per a passar litres d'un contenidor a altre (passaContingut) de forma que si cap es passa tot i sinó es passa sols el que es puga fins que quede ple el segon.
 
 Finalment, tindrem un mètode que dibuixe els contenidors amb el seu contingut (dibuixaContenidor). Podem utilitzar una funció que cridarem de forma repetitiva per a mostrar els contenidors.
 
-1. **Classe Contenidor**
+:::: tabs
+=== Java
+
+::: tabs
+== Classe Contenidor
 
 ```java
-package UF08_Exemple02;
+package UF07_Exemple02;
 /**
-* UF08 Exemple 02: Classe Contenidor
+* UF07 Exemple 02: Classe Contenidor
 */
 public class Contenidor {
     // Atributs
@@ -589,13 +664,13 @@ public class Contenidor {
 }
 ```
 
-2. **Programa Principal**
+== Programa Principal
 
 ```java
-package UF08_Exemple02;
+package UF07_Exemple02;
 import java.util.Scanner;
 /**
-* UF08 Exemple 02: Programa 
+* UF07 Exemple 02: Programa 
 */
 public class ProgramaContenidor {
     public static void main(String[] args) {
@@ -657,9 +732,12 @@ public class ProgramaContenidor {
 }
 ```
 
+:::
+::::
+
 **ENCAPSULAMENT**
 
 - Realitza proves sobre la visibilitat dels atributs capacitat i contingut:
   - Tal i com estan definits, es pot accedir des de una altra classe dins del mateix paquet? La resposta és sí, de fet si en el programa principal substituïm diposit1.mostraCapacitat() per diposit1.capacitat no dona cap problema.
   - I si passem el programa principal a un altre paquet, continuarem podent accedir de la forma indicada en el punt anterior? No, en aquest cas necessitarem que estiguen declarades com a public. Fes la prova.
-  - Fes ara la prova (independent de l’anterior) i declara aquests atributs com private, què li passa al programa principal si intentes fer el canvi del punt primer?.
+  - Fes ara la prova (independent de l'anterior) i declara aquests atributs com private, què li passa al programa principal si intentes fer el canvi del punt primer?.

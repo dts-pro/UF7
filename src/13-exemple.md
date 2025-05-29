@@ -2,7 +2,11 @@
 
 A continuació es mostra un exemple que aplica tan el tipus **enum** com una versió sobreescrita del mètode **toString**.
 
-1. **Tamany.java**
+:::: tabs
+=== Java
+
+::: tabs
+== Tamany.java
 
 ```java
 public enum Tamany {
@@ -10,7 +14,7 @@ public enum Tamany {
 }
 ```
 
-2. **Tipus.java**
+== Tipus.java
 
 ```java
 public enum Tipus {
@@ -18,7 +22,7 @@ public enum Tipus {
 }
 ```
 
-3. **Estat.java**
+== Estat.java
 
 ```java
 public enum Estat {
@@ -26,7 +30,7 @@ public enum Estat {
 }
 ```
 
-4. **Pizza.java**
+== Pizza.java
 
 ```java
 public class Pizza {
@@ -50,7 +54,7 @@ public class Pizza {
 }
 ```
 
-5. **Main.java**
+== Main.java
 
 ```java
 public class Main {
@@ -63,3 +67,6 @@ public class Main {
     }
 }
 ```
+
+:::
+::::

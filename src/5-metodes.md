@@ -2,11 +2,16 @@
 
 Es diu mètode a una funció d'una classe. La seua sintaxi general és la següent:
 
+::: tabs
+== Java
+
 ```java
 tipus nom_del_mètode(llista de paràmetres) {
     // cos del mètode
 }
 ```
+
+:::
 
 On:
 
@@ -16,9 +21,14 @@ On:
 
 Com en qualsevol altra funció, els mètodes retornen un valor amb la sentència return llevat que el tipus retornat es definisca com void:
 
+::: tabs
+== Java
+
 ```java
 return valor;
 ```
+
+:::
 
 Encara que seria perfectament vàlid crear una classe que únicament continga dades, això rarament ocorre. La majoria de les vegades és convenient crear mètodes per a accedir als atributs de la classe.
 

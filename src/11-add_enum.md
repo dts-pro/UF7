@@ -10,11 +10,16 @@ Es considera un tipus especial de classe i ajuda a millorar la claredat i la seg
 
 Exemple d'aplicació:
 
+::: tabs
+== Java
+
 ```java
 public enum Dia {
     DILLUNS, DIMARTS, DIMECRES, DIJOUS, DIVENDRES, DISSABTE, DIUMENGE
 }
 ```
+
+:::
 
 En aquest exemple, **Dia** és un tipus enumerat que conté set constants que representen els dies de la setmana.
 

@@ -1,6 +1,6 @@
 # 6. Constructors
 
-Pot resultar una tasca bastant pesada inicialitzar totes les variables d'una classe cada vegada que es crea una instància. Fins i tot quan s'afigen funcions adequades, és més senzill i requerisc realitzar totes les inicialitzacions quan l'objecte es crea per primera vegada. Com el procés d'inicialització és tan comú, Java permet que els objectes s’inicialitzen quan es creen. Aquesta inicialització automàtica es duu a terme mitjançant un constructor.
+Pot resultar una tasca bastant pesada inicialitzar totes les variables d'una classe cada vegada que es crea una instància. Fins i tot quan s'afigen funcions adequades, és més senzill i requerisc realitzar totes les inicialitzacions quan l'objecte es crea per primera vegada. Com el procés d'inicialització és tan comú, Java permet que els objectes s'inicialitzen quan es creen. Aquesta inicialització automàtica es duu a terme mitjançant un constructor.
 
 >[!IMPORTANT] <strong>IMPORTANT!</strong>
 >
@@ -14,6 +14,6 @@ Quan no es diu a un constructor de forma explícita, Java crea un constructor pe
 
 Una vegada es definisca un constructor per a la classe es deixa d'utilitzar el constructor per defecte.
 
->[!WARNING] <strong>ATENCIÓ</strong>
->
->Existeix la referència `this`, que apunta a la instància que anomena al mètode, i sempre està accessible, és utilitzat per les funcions membre per a accedir a les dades de l'objecte.
+::: warning **ATENCIÓ**
+Existeix la referència `this`, que apunta a la instància que anomena al mètode, i sempre està accessible, és utilitzat per les funcions membre per a accedir a les dades de l'objecte.
+:::

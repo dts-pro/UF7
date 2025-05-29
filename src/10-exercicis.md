@@ -18,7 +18,7 @@ En el main de la classe principal instància 3 objectes Punt amb les coordenades
 
 Crea un programa amb una classe anomenada Persona que representarà les dades principals d'una persona: **dni**, **nom**, **cognoms** i **edat**.
 
-En el main de la classe principal instància dos objectes de la classe Persona. Després, demana per teclat les dades de totes dues persones (guarda’ls en els objectes). Finalment, imprimeix dos missatges per pantalla (un per objecte) amb un missatge de l'estil “Ferrandis Lujan Garcia amb DNI… és / no és major d'edat”.
+En el main de la classe principal instància dos objectes de la classe Persona. Després, demana per teclat les dades de totes dues persones (guarda'ls en els objectes). Finalment, imprimeix dos missatges per pantalla (un per objecte) amb un missatge de l'estil “Ferrandis Luján Garcia amb DNI… és / no és major d'edat”.
 
 ## Exercici A3 – Rectangle
 
@@ -28,7 +28,7 @@ En el main de la classe principal instància 2 objectes Rectangle en (0,0)(5,5) 
 
 ## Exercici A4 – Article
 
-Crea un programa amb una classe anomenada Article amb els següents atributs: **nom**, **preu** (sense IVA), **iva** (sempre serà 21) i **cuantsQueden** (representa quants queden en el magatzem).
+Crea un programa amb una classe anomenada Article amb els següents atributs: **nom**, **preu** (sense IVA), **iva** (sempre serà 21) i **quantsQueden** (representa quants queden en el magatzem).
 
 En el main de la classe principal instància un objecte de la classe article. Assigna-li valors a tots els seus atributs (els que vulgues) i mostra per pantalla un missatge de l'estil “Pijama - Preu:10€ - IVA:21% - PVP:12,1€” (el PVP és el preu de venda al públic, és a dir, el preu amb IVA). Després, canvia el preu i torna a imprimir el missatge.
 
@@ -43,6 +43,9 @@ En el main de la classe principal instància un objecte de la classe article. As
 Afig a la classe Punt un constructor amb paràmetres que copie les coordenades passades com a
 argument als atributs de l'objecte. Així:
 
+::: tabs
+== Java
+
 ```java
 public Punt(int x, int y){
     this.x = x;
@@ -50,15 +53,20 @@ public Punt(int x, int y){
 }
 ```
 
+:::
+
 *Copiem els valors passats com a argument als atributs de l'objecte. Tingues en compte que <u>**int x** i **int y** són variables locals del mètode, NO són els atributs del objecte</u>. Per a fer referència als atributs de l'objecte cal utilitzar **this**.*
 
-*Fixa't que ja no serà possible fer Punt p = new Punt(). Ara serà obligatori fer per exemple Punt p = new Punt(2, 7). En l'apartat A havies de recordar-te d’assignar valors a x i y després de crear un punt, la qual cosa no és una bona idea en projectes grans amb centenars d'objectes (és molt fàcil equivocar-se). Ara és impossible equivocar-se perquè Java no et deixarà. Hem assegurat que tots els punts sempre tindran coordenades.*
+*Fixa't que ja no serà possible fer Punt p = new Punt(). Ara serà obligatori fer per exemple Punt p = new Punt(2, 7). En l'apartat A havies de recordar-te d'assignar valors a x i y després de crear un punt, la qual cosa no és una bona idea en projectes grans amb centenars d'objectes (és molt fàcil equivocar-se). Ara és impossible equivocar-se perquè Java no et deixarà. Hem assegurat que tots els punts sempre tindran coordenades.*
 
 Corregeix el main i utilitza el constructor amb paràmetres per a instanciar els objectes, passant-li com a argument els valors desitjats.
 
 ## Exercici B2 – Persona
 
 Afig a Persona el constructor de baix i corregeix el main per a utilitzar-lo:
+
+::: tabs
+== Java
 
 ```java
 public Persona(String dni, String nom, String cognoms, int edat) {
@@ -69,7 +77,12 @@ public Persona(String dni, String nom, String cognoms, int edat) {
 }
 ```
 
+:::
+
 *Tingues en compte que no és obligatori que els paràmetres del constructor es criden igual que els atributs de l'objecte (en tal cas no seria necessari utilitzar **this**). Podríem fer-ho així:*
+
+::: tabs
+== Java
 
 ```java
 public Persona(String id, String nom, String cog, int e) {
@@ -80,7 +93,12 @@ public Persona(String id, String nom, String cog, int e) {
 }
 ```
 
+:::
+
 *Tampoc és obligatori passar al constructor tots els atributs de la classe. Podriem decidir per exemple que en el nostre programari totes les persones han de tindre nom, cognoms i edat, però no és obligatori el DNI (nounats i xiquets). Aquest constructor també seria vàlid:*
+
+::: tabs
+== Java
 
 ```java
 public Persona(String nom, String cog, int e) {
@@ -90,6 +108,8 @@ public Persona(String nom, String cog, int e) {
 }
 ```
 
+:::
+
 *Una classe pot tindre tants constructors com vulgues sempre que tinguen diferent número i/o tipus de paràmetres (perquè no hi haja ambigüitat en com utilitzar).*
 
 ## Exercici B3 – Rectangle
@@ -97,7 +117,7 @@ public Persona(String nom, String cog, int e) {
 En el nostre programari necessitem assegurar-nos que la coordenada (x1,y1) represente la cantonada inferior esquerra i la (x2,y2) la superior dreta del
 rectangle, com en el dibuix.
 
-Afig a Rectangle un constructor amb els 4 paràmetres. Inclou un if que comprove els valors **(*)**. Si són vàlids guardarà els paràmetres en l'objecte. Si no ho són mostrarà un missatge de l'estil "ERROR al instanciar Rectangle..." utilitzant System.err.println(…). No podrem evitar que s’instancie l'objecte però almenys avisarem per pantalla.
+Afig a Rectangle un constructor amb els 4 paràmetres. Inclou un if que comprove els valors **(*)**. Si són vàlids guardarà els paràmetres en l'objecte. Si no ho són mostrarà un missatge de l'estil "ERROR al instanciar Rectangle..." utilitzant System.err.println(…). No podrem evitar que s'instancie l'objecte però almenys avisarem per pantalla.
 
 Corregeix el main per a utilitzar aquest constructor. Hauria de mostrar un missatge d'error.
 
@@ -105,7 +125,7 @@ Corregeix el main per a utilitzar aquest constructor. Hauria de mostrar un missa
 
 ## Exercici B4 – Article
 
-Afig un constructor amb 4 paràmetres que assigne valors a nom, preu, iva i cuantsQueden. Aquest constructor haurà de mostrar un missatge d'error si algun dels valors nom, preu, iva o cuantsQueden no són vàlids. Quines condicions creus que podrien determinar si son vàlids o no? Raona-ho i implementa el codi.
+Afig un constructor amb 4 paràmetres que assigne valors a nom, preu, iva i quantsQueden. Aquest constructor haurà de mostrar un missatge d'error si algun dels valors nom, preu, iva o quantsQueden no són vàlids. Quines condicions creus que podrien determinar si son vàlids o no? Raona-ho i implementa el codi.
 
 Corregeix el main i prova de crear diversos articles. Introdueix alguns amb valors incorrectes per a comprovar si avisa de l'error.
 
@@ -150,7 +170,7 @@ Corregeix el main per a utilitzar els getters i setters. Prova a instanciar dive
 
 ## Exercici C2 – Persona
 
-Aplica l’encapsulament bàsic a la classe Persona: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
+Aplica l'encapsulament bàsic a la classe Persona: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
 
 Corregeix el main per a utilitzar els getters i setters. Prova a instanciar diversos objectes, mostrar els seus valors per pantalla, modificar-los, etc.
 
@@ -160,7 +180,7 @@ Corregeix el main per a utilitzar els getters i setters. Prova a instanciar dive
 
 <div style="flex: 1; padding: 10px;">
 
-Aplica l’encapsulament bàsic a la classe Rectangle: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
+Aplica l'encapsulament bàsic a la classe Rectangle: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
 
 Recordes la condició explicada en B3? Tindràs que programar els setters de manera que comproven el valor passat com a argument abans de guardar-lo en
 l'objecte. Si no fora correcte es mostrarà un missatge d'error (i NO es guardarà el valor).
@@ -178,7 +198,7 @@ Corregeix el main per a utilitzar els getters i setters. Prova a instanciar dive
 
 ## Exercici C4 – Article
 
-Aplica l’encapsulament bàsic a la classe Article: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
+Aplica l'encapsulament bàsic a la classe Article: Declara tots els seus atributs com private i crea tots els getters i setters necessaris (un get i un set per atribut).
 
 Programa els setters perquè comproven els valors i els guarden en l'objecte sol si són correctes. En cas contrari mostra un missatge d'error.
 
@@ -188,11 +208,11 @@ Una classe ben dissenyada deuria incloure mètodes que realitzen operacions amb 
 
 Per exemple, la classe Scanner té mètodes com getInt(), getDouble, getLine(), etc. que algú ha programat i podrem utilitzar quan els necessitem sense haver de programar-ho nosaltres ni preocupar-nos per com funcionen internament. El mateix succeeix amb la classe String (charAt, substring, toCharArray, etc.), la classe Math (random, min, max, abs, etc.), la classe Arrays, etc.
 
-Totes estes són classes que Java incorpora per defecte (n’hi ha milers). Existeixen moltes altres que permeten fer tot tipus de coses com crear interfícies gràfiques amb botons, treballar amb imatges, llegir i escriure en arxius, reproduir música, enviar o rebre dades a través de la xarxa, etc.
+Totes estes són classes que Java incorpora per defecte (n'hi ha milers). Existeixen moltes altres que permeten fer tot tipus de coses com crear interfícies gràfiques amb botons, treballar amb imatges, llegir i escriure en arxius, reproduir música, enviar o rebre dades a través de la xarxa, etc.
 
 En aquesta unitat estem aprenent a dissenyar i programar les nostres pròpies classes, els fonaments de la Programació Orientada a Objectes, necessari en qualsevol projecte programari d'una certa envergadura.
 
-Recorda que els mètodes poden ser private (només poden utilitzar-se des de dins de la classe) o public (poden utilitzar-se des de fora, formen part de l’interfície de la classe).
+Recorda que els mètodes poden ser private (només poden utilitzar-se des de dins de la classe) o public (poden utilitzar-se des de fora, formen part de l'interfície de la classe).
 
 En aquest apartat tens que modificar els programes de l'apartat anterior (o fes una còpia del
 projecte si ho prefereixes) i afegir-los els mètodes que s'indiquen.
@@ -215,7 +235,7 @@ Afig a la classe Persona els següents mètodes públics:
 - public void imprimeix() // Imprimeix la informació de l'objecte: “DNI:… Nom:… etc.”
 - public boolean esMajorEdat() // Retorna true si és major d'edat (false si no).
 - public boolean esJubilat() // Retorna true si té 65 anys o més (false si no).
-- public int diferenciaEdat(Persona p) // Retorna la diferència d'edat entre ‘this’ i p.
+- public int diferenciaEdat(Persona p) // Retorna la diferència d'edat entre ‘this' i p.
 
 Prova d'utilitzar aquests mètodes des del main per a comprovar el seu funcionament.
 
@@ -236,14 +256,14 @@ Afig a la classe Article mètodes públics amb les següents funcionalitats:
 - Mètode per a imprimir la informació de l'article per pantalla.
 - Mètode getPVP que retorne el preu de venda al públic (PVP) amb iva inclòs.
 - Mètode getPVPDescompte que retorne el PVP amb un descompte passat com a argument.
-- Mètode vendre que actualitza els atributs de l'objecte després de vendre una quantitat ‘x’ (si és possible). Retornarà true si ha sigut possible (false en cas contrari).
-- Mètode emmagatzema que actualitza els atributs de l'objecte després d'emmagatzemar una quantitat ‘x’ (si és possible). Retornarà true si ha sigut possible (false en cas contrari).
+- Mètode vendre que actualitza els atributs de l'objecte després de vendre una quantitat ‘x' (si és possible). Retornarà true si ha sigut possible (false en cas contrari).
+- Mètode emmagatzema que actualitza els atributs de l'objecte després d'emmagatzemar una quantitat ‘x' (si és possible). Retornarà true si ha sigut possible (false en cas contrari).
 
 ## Apartat E – Static i final
 
 Els modificadors static i final són opcionals, poden utilitzar-se tant en atributs com en mètodes i poden combinar-se tots dos:
 
-- static: L'atribut o mètode pertany a la classe (no a l'objecte). Per això pot utilitzar-se sense instanciar cap objecte, des del nom de la classe: NomClasse.atribut o NomClasse.metode(...). Com el valor s'emmagatzema en la classe NO pren valors diferents en cada objecte (com sí que succeeix amb els atributs ‘normals’ no static).  
+- static: L'atribut o mètode pertany a la classe (no a l'objecte). Per això pot utilitzar-se sense instanciar cap objecte, des del nom de la classe: NomClasse.atribut o NomClasse.metode(...). Com el valor s'emmagatzema en la classe NO pren valors diferents en cada objecte (com sí que succeeix amb els atributs ‘normals' no static).  
 Per exemple:
   - L'atribut salariMinim d'Empleat (ss comú per a tots, pot canviar).
   - Mètodes útils com Arrays.fill(…) o String.valueOf(…) que podem utilitzar directament des de les classes Arrays i String sense instanciar un objecte.  
@@ -259,9 +279,9 @@ Per exemple:
 Necessitem un mètode que ens permeta crear un objecte Punt amb coordenades aleatòries. Aquesta funcionalitat no depén de cap objecte concret per la qual cosa serà estàtica. Haurà de crear un nou Punt (utilitza el constructor) amb x e i entre -100 i 100, i després retornar-lo (amb
 return).
 
-- public static Punt creaPuntoAleatorio()
+- public static Punt creaPuntoAleatori()
 
-Prova’l en el main per a comprovar que funciona. Crea diversos punts aleatoris amb Punt.creaPuntAleatori() i imprimeix el seu valor per pantalla.
+Prova'l en el main per a comprovar que funciona. Crea diversos punts aleatoris amb Punt.creaPuntAleatori() i imprimeix el seu valor per pantalla.
 
 ## Exercici E2 – Persona
 
@@ -269,7 +289,7 @@ El DNI d'una persona no pot variar. Afig el modificador final a l'atribut dni i 
 
 La majoria d'edat als 18 anys és un valor comú a totes les persones i no pot variar. Crea un nou atribut anomenat majoriaEdad que siga static i final. Hauràs d'inicialitzar-lo a 18 en la declaració. Utilitza-ho en el mètode que comprova si una persona és major d'edat.
 
-Crea un mètode static boolean validarDNI(String dni) que retorne true si dni és vàlid (té 8 números i una lletra). Si no, retornarà false. Utilitza’l en el constructor per a comprovar el dni (si no és vàlid, mostra un missatge d'error i no guardes els valors).
+Crea un mètode static boolean validarDNI(String dni) que retorne true si dni és vàlid (té 8 números i una lletra). Si no, retornarà false. Utilitza'l en el constructor per a comprovar el dni (si no és vàlid, mostra un missatge d'error i no guardes els valors).
 
 Realitza algunes proves en el main per a comprovar el funcionament dels canvis realitzats. També pots utilitzar Persona.validarDNI(…) per exemple per a comprovar si uns DNI introduïts per teclat són vàlids o no (sense necessitat de crear cap objecte).
 

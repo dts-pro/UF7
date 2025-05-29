@@ -1,10 +1,10 @@
-# 2. Fonaments d’una classe
+# 2. Fonaments d'una classe
 
 Una classe descriu un grup d'objectes que contenen una informació similar (atributs) i un comportament comú (mètodes).
 
 Les definicions comuns (nom de la classe, els noms dels atributs, i els mètodes) s'emmagatzemen una única vegada en cada classe, independentment de quants objectes d'aqueixa classe siguen presents en el sistema.
 
-**Una classe és com un motle**. A partir d’ella es poden crear objectes.
+**Una classe és com un motle**. A partir d'ella es poden crear objectes.
 
 És a dir abans de poder utilitzar un objecte s'ha de definir la classe a la qual pertany, aqueixa definició inclou:
 
@@ -12,6 +12,9 @@ Les definicions comuns (nom de la classe, els noms dels atributs, i els mètodes
 - **Mètodes**. Les funciones membre de la classe. Són les accions o operacions que pot realitzar la classe. Igual que els atributs poden ser public, private o protected.
 
 La sintaxi d'una classe a Java és la següent:
+
+::: tabs
+== Java
 
 ```java
 [accés] class nomDeClase {
@@ -29,9 +32,14 @@ La sintaxi d'una classe a Java és la següent:
 }
 ```
 
+:::
+
 Vegem un exemple:
 
 La classe Persona conté dos atributs (variables) per a emmagatzemar dades sobre una persona (nom i edat) a més de diversos mètodes (funcions) que fan coses amb aquestes dades.
+
+::: tabs
+== Java
 
 ```java
 public class Persona {
@@ -69,7 +77,9 @@ public class Persona {
 }
 ```
 
-Cal tindre en compte que **la classe Persona ens servirà per a crear tants objectes Persona com necessitem, cadascun amb el seu nom i edat**. Els mètodes ens permetran manipular les dades de cada objecte. Això s’explica en més detall en el següent apartat.
+:::
+
+Cal tindre en compte que **la classe Persona ens servirà per a crear tants objectes Persona com necessitem, cadascun amb el seu nom i edat**. Els mètodes ens permetran manipular les dades de cada objecte. Això s'explica en més detall en el següent apartat.
 
 També és important entendre que cada classe es crea en un arxiu Java diferent (amb el mateix nom de la classe), i s'utilitzen fora de la classe.
 
