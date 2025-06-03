@@ -1,17 +1,17 @@
 # 2. Fonaments d'una classe
 
-Una classe descriu un grup d'objectes que contenen una informació similar (atributs) i un comportament comú (mètodes).
+Una **classe** descriu un conjunt d'objectes que comparteixen una informació semblant (atributs) i un comportament comú (mètodes).
 
-Les definicions comuns (nom de la classe, els noms dels atributs, i els mètodes) s'emmagatzemen una única vegada en cada classe, independentment de quants objectes d'aqueixa classe siguen presents en el sistema.
+Les definicions comunes com el nom de la classe, els noms dels atributs i els mètodes es declaren una única vegada dins la classe, independentment de quants objectes d'eixa classe es creen.
 
-**Una classe és com un motle**. A partir d'ella es poden crear objectes.
+**Una classe es pot entendre com un motle a partir del qual es poden construir objectes.**
 
-És a dir abans de poder utilitzar un objecte s'ha de definir la classe a la qual pertany, aqueixa definició inclou:
+Abans d'utilitzar un objecte, s'ha de definir la classe a la qual pertany. Aquesta definició inclou generalment:
 
-- **Atributs**. Les variables membre de la classe. Poden ser `public` (accessibles des d'una altra classe), `private` (només accessibles per codi de la seua pròpia classe) o `protected` (accessibles per les subclasses).
-- **Mètodes**. Les funciones membre de la classe. Són les accions o operacions que pot realitzar la classe. Igual que els atributs poden ser public, private o protected.
+- Atributs: Són les variables associades als objectes. Segons el llenguatge de programació, poden tenir diferents nivells d'accés (com ara públics, privats o protegits).
+- Mètodes: Són les accions que poden realitzar els objectes. També poden estar subjectes a diferents nivells d'accés.
 
-La sintaxi d'una classe a Java és la següent:
+La sintaxi d'una classe és la següent:
 
 ::: tabs
 == Java
@@ -41,6 +41,8 @@ La classe Persona conté dos atributs (variables) per a emmagatzemar dades sobre
 ::: tabs
 == Java
 
+Fitxer *Persona.java*:
+
 ```java
 public class Persona {
     String nom; int edat;
@@ -66,12 +68,12 @@ public class Persona {
     }
 
     // Mostra el seu nom per pantalla 
-    void imprimeNom() {
+    void imprimeixNom() {
         System.out.println(nom);
     }
 
     // Retorna true si és major d'edat, false en cas contrari boolean
-    esMajorEdat() {
+    boolean esMajorEdat() {
         return (edat >= 18)
     }
 }
@@ -79,14 +81,12 @@ public class Persona {
 
 :::
 
-Cal tindre en compte que **la classe Persona ens servirà per a crear tants objectes Persona com necessitem, cadascun amb el seu nom i edat**. Els mètodes ens permetran manipular les dades de cada objecte. Això s'explica en més detall en el següent apartat.
+Una classe definida per a representar un tipus d'entitat (en l'exemple, *Persona*) ens permetrà crear tants objectes d'eixe tipus com necessitem, cadascun amb les seues dades pròpies (en l'exemple, *nom* i *edat*). Els mètodes ens permetran consultar o modificar la informació de cada objecte. Això s'explica en més detall en el següent apartat.
 
-També és important entendre que cada classe es crea en un arxiu Java diferent (amb el mateix nom de la classe), i s'utilitzen fora de la classe.
+També és important entendre que, en molts llenguatges orientats a objectes, cada classe pot definir-se en un arxiu separat amb el mateix nom que la classe, i posteriorment es poden utilitzar aquestes classes des d'altres parts del programa. Generalment, un altre arxiu contindrà el programa principal, on s'executa el codi principal i es poden crear objectes d'eixes classes o usar els seus mètodes i atributs.
 
-Per exemple, podriem tindre un arxiu Persona.java (amb la classe Persona de l'exemple anterior) a més d'un arxiu Programa.java (que només tindrà la funció principal `public static void main` a la qual estem acostumats). **Des de la funció main del Programa podrem crear objectes de tipus Persona a més de qualsevol altre codi que necessitem**. Això es veurà en exemples posteriors.
+Els atributs i mètodes d'una classe es coneixen com els membres de la classe.
 
-Els atributs i mètodes d'una classe es diuen membres d'una classe.
+**Els atributs** (és a dir, les variables associades als objectes) **s'anomenen també variables d'instància**, perquè cada objecte de la classe té la seua pròpia còpia d'aquestes variables. Això vol dir que les dades de cada objecte són independents de les dels altres.
 
-Els atributs (variables) d'una classe es diuen variables d'instància perquè cada instància de la classe (és a dir, cada objecte de la classe), conté les seues propies variabes atribut. Per tant, les dades de cada objecte són individuals i independent dels altres objectes.
-
-La paraula opcional `static` serveix per a fer que el mètode o l'atribut a la qual precedeix es puga utilitzar de manera genèrica (més endavant es parlarà de classes genèriques), **els atributs i mètodes així definits es diuen atributs de classe i mètodes de classe**, respectivament.
+Alguns llenguatges també permeten declarar membres com a estàtics (amb paraules com `static`). En aquest cas, l'atribut o mètode no està associat a una instància concreta, sinó a la classe en general, i es pot utilitzar sense haver creat cap objecte. Aquests membres s'anomenen atributs de classe i mètodes de classe.

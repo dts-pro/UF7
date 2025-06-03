@@ -2,13 +2,13 @@
 
 La Programació Orientada a Objectes (POO) fa que els problemes siguen més senzills, en permetre dividir el problema. Aquesta divisió es fa en objectes, de manera que cada objecte funcione de forma totalment independent.
 
->[!IMPORTANT] <strong>IMPORTANT!:</strong>
+>[!IMPORTANT] <strong>IMPORTANT!</strong>
 >
 >- Un **objecte** és un element del programa que posseeix les seues pròpies dades i el seu propi funcionament.
 >
 >- Una **classe** descriu un grup d'objectes que contenen una informació similar (atributs) i un comportament comú (mètodes).
 
->[!WARNING] <strong>ATENCIÓ!:</strong>
+>[!WARNING] <strong>ATENCIÓ!</strong>
 >
 >Abans de poder utilitzar un objecte, s'ha de definir la seua classe. La classe és la definició d'una mena d'objecte.
 

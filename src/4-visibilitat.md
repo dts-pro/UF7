@@ -1,17 +1,30 @@
-# 4. Tipus d'accés als membres d'una classe (Visibilitat)
+# 4. Tipus d'accés als membres d'una classe (visibilitat)
 
-Els membres d'una classe (atributs i mètodes, és a dir, les seues variables i funcions) poden definir-se com públics, privats o protegits. És important entendre la diferència:
+Els membres d'una classe (atributs i mètodes, és a dir, les seues variables i funcions) poden tindre diferents nivells d'accés, segons el llenguatge de programació. Habitualment, es distingeix entre:
 
-- **public**: Es pot utilitzar des de qualsevol classe.
-- **private**: Només pot utilitzar-ho la pròpia classe.
-- **protected**: Pot utilitzar-ho la pròpia classe i també les subclasses heretades (ara com ara no l'utilitzarem, l'herència de classes es veurà en la següent unitat).
+- **Public**: Pot accedir-s'hi des de qualsevol altre codi (classe, mòdul o fitxer) que importe o visibilitze la classe.
+- **Privat**: Només pot accedir-s'hi des del mateix cos de la classe; ningú fora d'ella no pot llegir ni modificar aqueixos membres.
+- **Protegit**: Pot accedir-s'hi la pròpia classe i també les subclasses (o classes derivades) que hereten d'ella.
+- **Paquet**: Els membres marcats amb aquest nivell només són accessibles per codi dins del mateix paquet, mòdul o directori (depèn de com organitze el llenguatge els espais de noms).
 
-Se'n diu **interfície** als membres d'una classe (atributs i mètodes) que són public, perquè són els que permeten interactuar amb la classe des de fora d'ella.
+La sintaxi concreta per a cada nivell d'accés és la següent:
 
-Els principis de la programació orientada a objectes diu que per a mantindre l'encapsulació en els objectes hem d'aplicar l'especificador public a les funcions membre que formen la interfície pública i denegar l'accés a les dades membre usats per aqueixes funcions mitjançant els especificats private.
+::: tabs
+== Java
 
->[!WARNING] <strong>ATENCIÓ!:</strong>
->
->En un **paquet**, que és un agrupament lògic de classes en un mateix directori, els atributs i els mètodes d'aquestes classes són **públics** per defecte per a la resta de classes existents en el mateix paquet, i **privats** per a qualsevol classe que es trobe fora (llevat que s'especifique el contrari).
+- `public`
+- `protected`
+- `private`
+- (paquet sense qualificació)
 
-Quan un paquet no està definit, es diu que la classe pertany al paquet per defecte, per tant s'aplicarà el qualificador public a la resta de les classes els fitxers de les quals es troben en el mateix directori (veure exemple 3).
+:::
+
+La idea és restringir l'accés a les dades internes d'una classe per tal de mantenir la seua **encapsulació**. D'aquesta manera, es defineix una **interfície pública** (els membres marcats com a public) que permet a altres components interactuar amb la classe sense conéixer-ne els detalls interns, i es mantenen com a private tots els atributs i mètodes que no han de ser exposats directament.
+
+Per a mantenir l'encapsulació, és recomanable:
+
+- Marcar com a publics únicament aquells mètodes i atributs que formen part de l'interfície que vols exposar.
+- Marcar com a privades (o equivalent) totes les dades internes i mètodes auxiliars que no han de ser accedits directament per codi extern.
+- Marcar com a protegit només quan cal que una classe derivada puga accedir a algunes dades o funcionalitats concretes de la classe base, sense fer-les públiques a tot arreu.
+
+D'aquesta manera, el codi extern només podrà interactuar amb la classe a través de la seua interfície pública, i es minimitza el risc d'alterar l'estat intern dels objectes per error.
