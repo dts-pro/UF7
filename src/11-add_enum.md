@@ -1,12 +1,12 @@
 # 1. Tipus enumerat
 
-Un tipus enumerat (`enum`) és una característica de Java que permet definir un conjunt limitat de valors constants. S'utilitza per representar dades fixes que no canvien, com per exemple:
+Un tipus enumerat és una construcció que permet definir un conjunt tancat de valors constants i relacionats. S'utilitza per representar dades fixes que no canvien, com ara elements predefinits que es repeteixen en contextos concrets (per exemple, dies de la setmana, estats d'un procés, punts cardinals, etc.).
 
-- els dies de la setmana
-- els punts cardinals
-- els estats d'un procés
+Aquest tipus especial ofereix diversos avantatges:
 
-Es considera un tipus especial de classe i ajuda a millorar la claredat i la seguretat del codi.
+- **Claredat**: El programador sap exactament quins valors són vàlids, evitant l'ús arbitrari de literals dispersos (cadenes o números) que puguen ocasionar errors.
+- **Seguretat** de tipus: Els valors possibles queden limitats al conjunt definit, de manera que no es poden assignar o comparar valors no previstos.
+- **Llegibilitat**: El codi resulta més fàcil de llegir, ja que els valors enumerats es tracten com a identificadors descriptius en lloc d'utilitzar literals inespecífics.
 
 Exemple d'aplicació:
 

@@ -2,12 +2,14 @@
 
 ## 9.1. Exemple 1
 
-En aquest exemple implementarem la classe Articles. Aquesta classe representa cada objecte amb els següents atributs: codi_article, titol, format i preu_alquiler. També defineix tres mètodes que permeten calcular, respectivament, el preu de lloguer d'un dia, de dos dies i una setmana. El primer que necessitarem, i això ho farem per cada classe que necessitem en tots els exemples, serà crear-nos una nova classe a Java. Per a això punxarem amb el botó dret sobre el paquet on anem a tindre les classes i després en NEW > Java Class. Crearem una classe anomenada Article.
-
-![Crear una nova classe](/uf7/nova_classe.jpg)
+En aquest exemple implementarem la classe Articles. Aquesta classe representa cada objecte amb els següents atributs: codi_article, titol, format i preu_alquiler. També defineix tres mètodes que permeten calcular, respectivament, el preu de lloguer d'un dia, de dos dies i una setmana. El primer que necessitarem, i això ho farem per cada classe que necessitem en tots els exemples, serà crear-nos una nova classe. 
 
 ::: tabs
 == Java
+
+Per a això punxarem amb el botó dret sobre el paquet on anem a tindre les classes i després en `NEW` > `Java Class`. Crearem una classe anomenada Article.
+
+![Crear una nova classe](/uf7/nova_classe.jpg)
 
 ```java
 public class Article{
@@ -44,7 +46,7 @@ public class Article{
 
 El mètode preu1 retorna el valor del preu de lloguer de l'article. El mètode preu2 calcula el preu de lloguer de dos dies fent un descompte del 20% (per això es multiplica per 1,8). Per últim el mètode preu_setmana calcula el preu d'una setmana multiplicant per 5 el preu de lloguer.
 
-Crearem una classe nova anomenada Exemples, amb la funció public static void main, on anem a instanciar (crear) objectes de Article i utilitzar-los. Amb l'operador new crearem una instància de la classe Article. Com de moment la classe no té constructors s'invocarà al constructor per defecte de la classe.
+Crearem una classe nova anomenada Exemples, que serà la classe principal, on anem a instanciar (crear) objectes de Article i utilitzar-los. Primerament, crearem una instància de la classe Article i, com de moment la classe no té constructors, s'invocarà al constructor per defecte de la classe.
 
 **<u>RECORDA</u>**: Quan instanciem una classe estem creant un objecte d'aquesta classe.
 
@@ -98,7 +100,7 @@ Alquiler Art. 002, 1 setmana: 15.0
 
 ## 9.2. Exemple 2
 
-En aquest exemple anem a implementar la classe Cuadrado, que representa quadrats mitjançant dues coordenades 2D, i defineix tres mètodes que permeten calcular, respectivament, la diagonal, el perímetre i l'àrea.
+En aquest exemple anem a implementar la classe Quadrat, que representa quadrats mitjançant dues coordenades 2D, i defineix tres mètodes que permeten calcular, respectivament, la diagonal, el perímetre i l'àrea.
 
 El criteri de representació pren les coordenades horitzontals (x) creixents d'esquerra a dreta, i les verticals (y) creixents de dalt a baix.
 
@@ -171,11 +173,11 @@ L'àrea del quadrat 2 és: 16.00000000000004
 
 ## 9.3. Exemple 3
 
-En aquest exemple aplicarem el principi de encapsulament fent private els atributs de la classe i public els mètodes. Per a això modificarem la classe Article de l'Exemple 1.
+En aquest exemple aplicarem el principi de encapsulament fent privats els atributs de la classe i públics els mètodes. Per a això modificarem la classe Article de l'Exemple 1.
 
-Però ara no podrem llegir ni modificar els atributs de la classe des de fora d'ella (perquè són private). Així que definirem mètodes que ens permeten fer-ho:
+Però ara no podrem llegir ni modificar els atributs de la classe des de fora d'ella (perquè són privats). Així que definirem mètodes que ens permeten fer-ho:
 
-- Crearem mètodes public (un per atribut) que ens retorne el valor de cada atribut. A això se'n diu mètodes **get** o **getters** (de l'anglés agafar).
+- Crearem mètodes públics (un per atribut) que ens retorne el valor de cada atribut. A això se'n diu mètodes **get** o **getters** (de l'anglés agafar).
 - De la mateixa manera, mètodes que ens permeten modificar el valor dels atributs. A això se'n diu mètodes **set** o **setters** (de l'anglés establir). En l'exemple es diu modificaValors i permet canviar tots els valors en una sola crida.
 
 :::: tabs
@@ -386,13 +388,13 @@ Alquiler Art. 002, 1 setmana: 15.0
 
 ## 9.5. Exemple 5
 
-Per a il·lustrar l'ús dels qualificadors **final** i **static** dins de la nostra classe Article, definirem tres atributs principals:
+Per a il·lustrar l'ús d'atributs constants i estàtics dins de la nostra classe Article, definirem tres atributs principals:
 
 - La constant IVA.
 - Un atribut compartit que comptabilitzarà el nombre d'instàncies que s'hagen definit fins llavors.
 - Un atribut constant String, diferent per a cada objecte, que permeta identificar-los.
 
-Definirem IVA com static i final, podrem accedir al seu valor mitjançant l'expressió Article.IVA, sense necessitat d'haver creat cap objecte de la classe Article:
+Definirem IVA com a estàtic i constant, i podrem accedir al seu valor sense necessitat d'haver creat cap objecte de la classe Article:
 
 ::: tabs
 == Java
@@ -403,7 +405,7 @@ public static final double IVA = 0.16;
 
 :::
 
-L'atribut privat amb el número d'instància, en realitat, es tracta d'una variable global accessible per a tots els objectes de tipus Article:
+L'atribut privat amb el número d'instància és, en realitat, una variable global accessible per a tots els objectes de tipus Article:
 
 ::: tabs
 == Java
@@ -414,7 +416,7 @@ private static int numero = 0;
 
 :::
 
-I finalment, l'identificador constant de cada objecte s'indica amb un especificador final en la seua descripció.
+I finalment, l'identificador constant de cada objecte s'indica amb un especificador de constant en la seua descripció.
 
 ::: tabs
 == Java
@@ -429,9 +431,9 @@ Es deixa com a exercici proposat fer aquests canvis i provar-ho.
 
 ## 9.6. Exemple 6
 
-En aquest exemple crearem un array (vector) que continga deu objectes de tipus Article. Els instanciarem tots amb noms genèrics, consecutius i preus aleatoris.
+En aquest exemple crearem un vector que continga deu objectes de tipus Article. Els instanciarem tots amb noms genèrics, consecutius i preus aleatoris.
 
-Primer creem un vector de Articles anomenat elsMeusArticles (és un array de referències a objectes Article). Després instànciarem els 10 objectes, guardant cadascun dels objectes referenciats.
+Primer creem un vector de Articles anomenat elsMeusArticles (és un vector de referències a objectes Article). Després instanciarem els 10 objectes, guardant cadascun dels objectes referenciats.
 
 :::: tabs
 === Java
@@ -585,9 +587,9 @@ La classe contenidor tindrà dos atributs: capacitat i contingut.
 
 Cada cub es podrà crear amb una capacitat.
 
-Tindrem mètodes setter per a plenar el contenidor(plenaContenidor), actualitzar el contingut del contenidor amb un número de litres (actualitzaContenidor) o buidar completament el contenidor (buidaContenidor) i getter que ens donarà els litres de capacitat i contingut (mostraCapacita i mostra Contingut).
+Tindrem mètodes setter per a plenar el contenidor (plenaContenidor), actualitzar el contingut del contenidor amb un número de litres (actualitzaContenidor) o buidar completament el contenidor (buidaContenidor) i getter que ens donarà els litres de capacitat i contingut (mostraCapacita i mostra Contingut).
 
-Tindrem un mètode per a passar litres d'un contenidor a altre (passaContingut) de forma que si cap es passa tot i sinó es passa sols el que es puga fins que quede ple el segon.
+Tindrem un mètode per a passar litres d'un contenidor a un altre (passaContingut) de forma que si cap es passa tot i sinó es passa sols el que es puga fins que quede ple el segon.
 
 Finalment, tindrem un mètode que dibuixe els contenidors amb el seu contingut (dibuixaContenidor). Podem utilitzar una funció que cridarem de forma repetitiva per a mostrar els contenidors.
 
@@ -737,7 +739,8 @@ public class ProgramaContenidor {
 
 **ENCAPSULAMENT**
 
-- Realitza proves sobre la visibilitat dels atributs capacitat i contingut:
-  - Tal i com estan definits, es pot accedir des de una altra classe dins del mateix paquet? La resposta és sí, de fet si en el programa principal substituïm diposit1.mostraCapacitat() per diposit1.capacitat no dona cap problema.
-  - I si passem el programa principal a un altre paquet, continuarem podent accedir de la forma indicada en el punt anterior? No, en aquest cas necessitarem que estiguen declarades com a public. Fes la prova.
-  - Fes ara la prova (independent de l'anterior) i declara aquests atributs com private, què li passa al programa principal si intentes fer el canvi del punt primer?.
+Realitza proves sobre la visibilitat dels atributs capacitat i contingut:
+
+- Tal i com estan definits, es pot accedir des de una altra classe dins del mateix paquet? La resposta és sí, de fet si en el programa principal substituïm diposit1.mostraCapacitat() per diposit1.capacitat no dona cap problema.
+- I si passem el programa principal a un altre paquet, continuarem podent accedir de la forma indicada en el punt anterior? No, en aquest cas necessitarem que estiguen declarades com a públiques. Fes la prova.
+- Fes ara la prova (independent de l'anterior) i declara aquests atributs com privats. Què li passa al programa principal si intentes fer el canvi del punt primer?.

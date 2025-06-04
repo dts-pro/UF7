@@ -1,4 +1,4 @@
-# 2. Mètode toString
+# 2. Mètode toString (Java)
 
 El mètode `toString` és heretat de la classe Object i es fa servir per obtenir una representació en forma de cadena d'un objecte. Quan s'imprimeix un objecte, el mètode toString és el que determina la sortida de text.
 

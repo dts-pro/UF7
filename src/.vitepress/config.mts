@@ -48,6 +48,7 @@ export default withMermaid({
         { text: 'Tipus enumerat', link: '/11-add_enum' },
         { text: 'Mètode toString', link: '/12-add_tostring' },
         { text: 'Exemple conjunt', link: '/13-exemple' },
+        { text: 'Referència this', link: '/14-add_this' },
       ]}
     ],
     sidebar: [
@@ -70,6 +71,7 @@ export default withMermaid({
         { text: 'Tipus enumerat', link: '/11-add_enum' },
         { text: 'Mètode toString', link: '/12-add_tostring' },
         { text: 'Exemple conjunt', link: '/13-exemple' },
+        { text: 'Referència this', link: '/14-add_this' },
         { text: '<img src="img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
         { text: '<img src="img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
       ]}

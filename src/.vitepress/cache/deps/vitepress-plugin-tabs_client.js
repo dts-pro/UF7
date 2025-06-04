@@ -5,8 +5,8 @@ import {
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/vitepress-plugin-tabs/src/client/index.ts
-import PluginTabs from "C:/Users/David/Desktop/Repo PRO/UF7/node_modules/vitepress-plugin-tabs/src/client/PluginTabs.vue";
-import PluginTabsTab from "C:/Users/David/Desktop/Repo PRO/UF7/node_modules/vitepress-plugin-tabs/src/client/PluginTabsTab.vue";
+import PluginTabs from "C:/Users/David/Desktop/Repo PRO David/UF7/node_modules/vitepress-plugin-tabs/src/client/PluginTabs.vue";
+import PluginTabsTab from "C:/Users/David/Desktop/Repo PRO David/UF7/node_modules/vitepress-plugin-tabs/src/client/PluginTabsTab.vue";
 
 // node_modules/vitepress-plugin-tabs/src/client/useTabsSelectedState.ts
 var injectionKey = "vitepress:tabSharedState";

@@ -1,4 +1,4 @@
-# 3. Exemple
+# 3. Exemple d'enumerador i toString (Java)
 
 A continuació es mostra un exemple que aplica tan el tipus **enum** com una versió sobreescrita del mètode **toString**.
 

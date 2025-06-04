@@ -1,14 +1,24 @@
 # 7. Constants de classe i objecte
 
-Els membres constants es defineixen a Java a través de la paraula reservada final, mentre que els membres de classe es defineixen mitjançant la paraula reservada static. D'aquesta manera, si considerem que els membres són atributs, tenim quatre possibles combinacions a Java per a indicar si un atribut és constant:
+Els membres d'una classe (mètodes i atributs) poden tindre diferents combinacions de comportament pel que fa a la seua constància i visibilitat compartida entre instàncies. Aquestes combinacions determinen com s'inicialitzen i com s'utilitzen durant el temps de vida del programa:
 
-- Atributs `static`: prenen valors comuns a tots els objectes existents i potencialment variables. Poden utilitzar-se encara que no existisca cap objecte instanciat.
-- Atributs `final`: són valors constants, però potencialment diferents en cadascuna de les instàncies. El seu valor s'inicialitza en la fase de construcció de l'objecte i no poden ser modificats durant el temps de vida d'aquest.
-- Atributs `static final`: combinen les característiques de static i final.
-- Resta d'atributs (sense static ni final): atributs variables i diferents per a cada object.
+- **Membres de classe**: són atributs o funcions que **pertanyen a la classe en si, i no a una instància concreta**. El seu valor és comú a totes les instàncies i pot accedir-s'hi sense necessitat de crear cap objecte. Són útils per a informació compartida o funcionalitats globals dins la classe.
+- **Membres de classe constants**: combinen ambdues característiques. Representen **valors globals i invariables dins la classe**, sovint utilitzats com a constants simbòliques.
+- **Membres d'instància**: són **atributs propis de cada objecte**, i poden canviar lliurement al llarg de l'execució.
+- **Membres d'instància constants**: són valors que, **una vegada inicialitzats, no poden canviar**. Poden tindre un valor diferent per a cada objecte.
 
->[!WARNING] <strong>ATENCIÓ</strong>
->
->Els **atributs static** de la classe han de ser limitats, ja que poden donar lloc a errors de molt difícil depuració, a més d'anar contra el concepte de la programació orientada a objectes.
+::: warning ATENCIÓ
+L'ús extensiu de membres de classe (compartits per tots els objectes) pot generar dependències globals i dificultats a l'hora de depurar o mantindre el codi, ja que es contradiu el principi d'encapsulació i independència entre objectes.
+:::
 
-Les constants d'objecte es defineixen mitjançant la paraula reservada final. Es tracta d'atributs que prenen el valor en el constructor de l'objecte, un valor que no pot ser modificat en la resta del programa. D'aquesta manera, a cada objecte correspon un atribut d'aqueix tipus, però invariable per a ell. Aquest tipus d'atributs serveix per a identificar cada objecte de manera única (veure exemple 5).
+::: tabs
+== Java
+
+Els membres constants es defineixen a Java a través de la paraula reservada `final`, mentre que els membres de classe es defineixen mitjançant la paraula reservada `static`. D'aquesta manera, si considerem que els membres són atributs, tenim quatre possibles combinacions a Java per a indicar si un atribut és constant:
+
+- **Membres de classe**: `static`
+- **Membres de classe constants**: `static final`
+- **Membres d'instància**: sense *static* ni *final*
+- **Membres d'instància constants**: `final`
+
+:::
