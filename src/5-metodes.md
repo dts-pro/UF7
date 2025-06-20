@@ -42,7 +42,7 @@ public void saludar(String nom) {
     System.out.println("Hola, " + nom + "!");
 }
 
-// Mètode amb més d’un paràmetre
+// Mètode amb més d'un paràmetre
 public int sumar(int a, int b) {
     return a + b;
 }
@@ -66,7 +66,7 @@ Encara que seria possible crear una classe que únicament continga dades, això 
 
 Els ***getters*** i ***setters*** són mètodes especials que permeten llegir i modificar els valors dels atributs privats d'una classe respectivament. Això ajuda a protegir les dades i controlar com s'accedeix o es modifica cada atribut.
 
-- Un getter (també anomenat mètode d'accés) és un mètode que retorna el valor d’un atribut privat.
+- Un getter (també anomenat mètode d'accés) és un mètode que retorna el valor d'un atribut privat.
     ::: tabs
     == java
 
@@ -82,7 +82,7 @@ Els ***getters*** i ***setters*** són mètodes especials que permeten llegir i 
 
     :::
 
-- Un setter (també anomenat mètode modificador) és un mètode que permet canviar el valor d’un atribut privat.
+- Un setter (també anomenat mètode modificador) és un mètode que permet canviar el valor d'un atribut privat.
     ::: tabs
     == Java
 

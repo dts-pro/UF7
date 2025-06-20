@@ -1,8 +1,163 @@
 # Exercicis
 
+## Exercicis - Nivell bàsic
+
+### Exercici 1
+
+Estàs creant una aplicació que permetrà generar figures geomètriques en dos dimensions a partir de punts. Per a aconseguir-ho, primer que res caldrà crear una classe Punt que ens permeta emmagatzemar les coordenades X i Y.
+
+**a)** Crea la classe Punt amb els atributs necessaris. De moment, seran públics.  
+**b)** Instància tres objectes de tipus Punt a la classe principal, y assigna els valors (5,0), (10,10) i (-3,7). Mostra per pantalla les seues coordenades.  
+
+Ara volem crear figures geomètriques senzilles a partir de la classe Punt ja creada. Per exemple, rectangles, els quals es creen a partir de dos punts (en tenen quatre, però només dos són independents).
+
+**c)** Crea una classe Rectangle amb dos atributs Punt públics.  
+**d)** Instància un objecte de tipus Rectangle en la classe principal. Pots usar els punts creats en apartats anteriors.  
+
+Fins ara, als atributs els estem assignant valors de la mateixa manera que ho fem amb qualsevol variable. Però es poden inicialitzar al mateix moment d'instanciar un objecte mitjançant el constructor.
+
+**e)** Fes el constructor de les classes Punt i Rectangle, i modifica el programa principal per a usar-los.  
+**f)** En la classe principal, mostra per pantalla els seus quatre punts (els dos que té d'atributs i els dos que depenen d'aquests).  
+**g)** Mostra per pantalla el perímetre (suma de costats) i l'àrea (ample per alt) de l'objecte de tipus Rectangle creat. Tingues en compte que els costats sempre han de tindre valor positiu.  
+
+L'encapsulament és molt important per evitar accessos indesitjats a la informació de les classes. Per tant, en general, tots els atributs seran privats. I juntament amb l'encapsulament ve la implementació dels *getters* i *setters*.
+
+**h)** Modifica les classes Punt i Rectangle de forma que tots els atributs passen a ser privats, i afig els *getters* i *setters* corresponents. Modifica també la classe principal de forma que use estos mètodes (ja no tindrà accés directe ls seus valors).  
+
+Una classe ben dissenyada deuria incloure mètodes que realitzen operacions amb la informació dels objectes. D'aquesta manera la classe disposarà de funcionalitats útils tant per a nosaltres com per a altres programadors.
+
+**i)** Implementa en la classe Punt les funcionalitats següents:  
+
+- Imprimir per pantalla les coordenades.
+- Modificar els valors d'ambdues coordenades al mateix temps.
+- Desplaçar el punt la quantitat *d* indicada, és a dir, les noves coordenades del punt serien (d*X, d*Y).
+- Retornar la distància entre el propi objecte i un altre objecte que es passa com a paràmetre.
+
+**j)** Implementa en la classe Rectangle les funcionalitats següents:  
+
+- Imprimir la informació del rectangle per pantalla (els quatre punts).
+- Retornar el perímetre.
+- Retornar l'àrea.
+
+**k)** Prova a usar tots aquests mètodes des del programa principal.  
+
+Els modificadors d'estàtic i de constant són opcionals, poden utilitzar-se tant en atributs com en mètodes i poden combinar-se.
+
+**l)** Declara dos atributs constants de classe que van a servir per a límit de les coordenades. És a dir, els valors de X i Y de qualsevol punt no estarà fora dels valors -100 i 100.  
+**m)** Implementa una funcionalitat de classe que permeta generar punts de forma aleatòria (dins dels límits establits).  
+
+Ampliació:
+
+**n)** Crea la classe Triangle, amb els atributs necessaris i alguns mètodes (els equivalents a la classe Rectangle, per exemple). Instància algun objecte de tipus Triangle i prova els seus mètodes des de la classe principal.  
+
+### Exercici 2
+
+Estàs desenvolupant un sistema per gestionar les reserves dels ordinadors d'un laboratori d'informàtica. El laboratori està compost per diversos ordinadors, i cadascun pot ser reservat per un alumne durant una hora concreta. Per això, caldrà definir una sèrie de classes per representar els elements implicats.
+
+**a)** Crea una classe Ordinador amb els atributs següents (de moment, públics): id (un enter que identifica l'ordinador), model (una cadena), ram (quantitat entera en GB).  
+**b)** En la classe principal, crea tres ordinadors diferents, amb dades fictícies, i mostra les seues dades per pantalla.  
+
+Ara volem representar una reserva. Cada reserva l'associarem a un alumne, una hora i un ordinador concret.
+
+**c)** Crea una classe Reserva amb tres atributs públics: el nom de l'alumne, la franja horària (una cadena com "10:00-11:00") i l'ordinador que reserva (de tipus Ordinador).  
+**d)** Instancia un objecte de tipus Reserva en la classe principal, fent servir un dels ordinadors creats abans. Mostra la informació per pantalla.  
+
+Ara definirem constructors per facilitar la creació d'objectes.
+
+**e)** Implementa constructors per a les classes Ordinador i Reserva. Modifica el programa principal per a utilitzar-los.  
+**f)** Afig un mètode a Reserva que mostre tota la informació d'una reserva per pantalla. Usa'l en el programa principal.  
+
+Ara encapsularem les dades.
+
+**g)** Fes privats tots els atributs de Ordinador i Reserva, i crea els getters i setters corresponents. Modifica el programa principal per accedir a les dades mitjançant aquests mètodes.  
+
+Volem gestionar múltiples ordinadors i múltiples reserves. Utilitzarem estructures més complexes.
+
+**h)** Afig a la classe principal un llistat d'ordinadors disponibles i un mapa de reserves, on la clau serà una cadena amb la franja horària i el valor serà una llista de reserves fetes per a eixa hora.  
+**i)** Implementa una funcionalitat que permeta reservar un ordinador per a una hora concreta:
+
+- L'usuari introdueix el seu nom, l'id de l'ordinador i l'hora inicial (per exemple, 10. Després hauràs de crear la cadena "10:00-11:00").
+  - Si ja està reservat a eixa hora, es mostra un missatge d'error.
+  - Si l'ordinador no existeix (no troba el id) mostra un missatge d'error.
+  - Si està lliure, es crea la reserva i s'afegeix al mapa.
+
+**j)** Afig un mètode a la classe principal per a mostrar totes les reserves realitzades en una franja horària concreta.  
+**k)** Afig una funcionalitat per a buscar totes les hores reservades per un determinat alumne. Retorna la quantitat.  
+**l)** Declara una constant de classe per indicar el nombre màxim de reserves per hora (per exemple, 5). Si ja hi ha aquest nombre de reserves per a una franja concreta, no s'hi poden afegir més.  
+**m)** Declara una constant de classe per indicar el nombre màxim de reserves fetes per un mateix alumne (per exemple, 3). Si ja hi ha aquest nombre de reserves per a un mateix alumne, no s'hi poden afegir més.  
+
+En el programa principal prova tots els mètodes.
+
+## Exercicis - Nivell mitjà
+
+### Exercici 3
+
+Estàs desenvolupant una aplicació per a emmagatzemar informació de cançons i àlbums d'una manera pràctica i organitzada. 
+
+**Una cançó contindrà** la informació bàsica d'una peça musical: **un títol, un/a artista i una duració (en segons)**. Com és habitual, hi ha certs límits a l'hora de considerar si una peça musical és vàlida: no es permetran cançons massa curtes ni excessivament llargues. Per tant, **la duració** de cada pista **haurà d'estar entre els 10 i els 600 segons**. Si en algun moment es pretén introduir una duració fora d'aquest marge, l'aplicació haurà d'indicar-ho clarament i tornar a demanar el valor fins que aquest siga adequat. Tampoc es permeten **títols** massa llargs, **amb un màxim de 50 caràcters**.
+
+A més de gestionar cançons individuals, l'aplicació ha de permetre agrupar-les en àlbums. Un àlbum tindrà un nom que el definisca, però al principi es trobarà buit de cançons. L'usuari haurà de poder afegir tantes cançons com desitge, una a una, mitjançant el teclat. No hi haurà cap limitació pel que fa al nombre de cançons per àlbum.
+
+Per tal que la interacció amb l'usuari siga el més útil i informativa possible, caldrà oferir diversos recursos per a consultar dades. L'usuari haurà de poder **visualitzar fàcilment la informació completa d'una cançó** concreta **o d'un àlbum** sencer, amb tots els detalls ben presentats. A més, serà convenient disposar d'un sistema que permeta **localitzar totes les cançons d'un àlbum que tinguen una duració superior a cinc minuts** (és a dir, més de 300 segons), ja que sovint s'utilitzen per a crear recopilatoris especials o seleccions per a oients exigents.
+
+L'usuari també tindrà la possibilitat de **comparar la duració de dues cançons** qualsevol per tal de saber quina d'elles és més llarga, una tasca habitual a l'hora d'ordenar pistes dins d'un àlbum. Altres funcionalitats interessants seran la de **conèixer la durada total de totes les cançons d'un àlbum** determinat, així com quina d'elles és **la més curta i quina és la més extensa**. Per fer l'experiència un poc més dinàmica, el sistema oferirà també la possibilitat de s**eleccionar aleatòriament una de les cançons d'un àlbum i mostrar-ne la informació**, com si es tractara d'una recomanació sorpresa per a escoltar en el moment.
+
+Una vegada desenvolupada l'aplicació, hauràs de crear un escenari de proves on es puguen verificar totes aquestes funcionalitats, assegurant-te que tot el sistema respon correctament i compleix amb els objectius plantejats.
+
+## Exercicis - Nivell avançat
+
+### Exercici 4
+
+Estàs treballant en el departament de nutrició d'un servei de càtering i necessites un sistema per organitzar tots els ingredients i elaborar un receptari de plats. Cada ingredient disposa d'un nom, un valor energètic en calories per unitat i un preu per unitat (amb valors raonables, per exemple entre 1 kcal i 1000 kcal, i entre 0,01€ i 100€; si es prova a introduir un valor fora d'aquest marge, s'haurà de corregir fins a tenir-ne un de vàlid).
+
+A partir d'aquests ingredients, l'equip de cuina vol crear receptes, cadascuna amb un nom identificatiu i una relació d'ingredients amb les quantitats necessàries de cada un (per exemple, 200 grams de quinoa, 50 grams de tomaca). Al principi el receptari estarà buit, però el programa ha de permetre afegir tantes receptes com es vulguen, sempre associant-les a ingredients ja existents.
+
+Per fer que el servei sigui àgil i eficient, el sistema ha de proporcionar diverses eines de consulta i càlcul:
+
+- Mostrar la informació completa d'un ingredient a partir del seu nom.
+- Mostrar la llista de totes les receptes disponibles, ordenades alfabèticament pel seu nom.
+- Per a una recepta determinada, calcular el total de calories i el cost total.
+- Localitzar totes les receptes que tinguen un cost inferior a 3€, per preparar menús econòmics.
+- Calcular la mitjana de calories i la mitjana de cost de totes les receptes creades.
+- Identificar la recepta més lleugera (menys calories) i la més barata del conjunt.
+- Oferir una recomanació aleatòria: triar a l'atzar una recepta i mostrar-ne tots els detalls com a suggeriment de menú.
+
+Per garantir la coherència, caldrà provar totes les funcionalitats del programa. Així asseguraràs que, d'una banda, els nutricionistes tenen tota la informació sempre a mà, i de l'altra, que el servei de càtering pot planificar menús saludables i adaptats a diferents pressupostos de manera ràpida i fiable.
+
+### Exercici 5
+
+Estàs col·laborant en la digitalització d'un petit magatzem logístic d'un centre de distribució. Fins ara, la gestió es feia amb paper, però ara es vol implementar un sistema que permeta emmagatzemar informació sobre els productes, controlar existències i facilitar certes operacions habituals del dia a dia.
+
+Cada producte es identifica per un codi alfanumèric únic (com per exemple "A105" o "X003") que està composat per una lletra i tres números, i es generarà automàticament de forma aleatòria en introduir un nou producte al sistema. Els productes tenen associats, a més, altres tres valors: un nom comercial, una quantitat actual en estoc i el pes per unitat (en grams). Per tal d'evitar errors, s'ha acordat que només s'admetran pesos entre 10 i 10.000 grams. Si l'usuari intenta introduir un valor fora d'aquest rang, el sistema haurà de mostrar un missatge d'error i tornar a demanar-lo.
+
+Els productes es distribueixen per zones del magatzem, i cada zona està identificada amb un nom (com "Zona A", "Zona B", etc.). Cada zona manté un registre dels productes que conté, així com les unitats concretes que hi ha de cada un. Serà com una llista de registres, on cada entrada conté el codi del producte i les unitats emmagatzemades.
+
+Les zones del magatzem pertanyen a un magatzem, amb nom, localització geogràfica i llistat de zones, que s'haurà de generar en el programa només una vegada, a l'inici de tot. Per tant, el magatzem contindrà un llistat de zones, i cada zona contindrà diversos productes. Com el magatzem té un espai limitat, no podrà contindre més d'un cert valor de pes, establit en la legislació en 10.000 kilograms (10.000.000 grams). En cas d'intentar introduir un producte, si es sobrepassa este límit, no s'afegirà i s'indicarà per pantalla.
+
+El sistema haurà de permetre:
+
+- Registrar nous productes amb validació de dades.
+- Afegir unitats d'un producte a una zona concreta, indicant codi, zona i nombre d'unitats.
+- Traure productes d'una zona.
+- Moure productes d'una zona a una altra.
+- Mostrar tota la informació d'un producte a partir del seu codi.
+- Consultar tot el que hi ha en una zona, amb el total d'unitats per codi i el pes total que ocupen.
+- Localitzar totes les unitats de productes pesats que cal transportar amb maquinària (superen els 5 kg per unitat).
+- Comparar dos productes diferents per saber quin pesa més per unitat.
+- Calcular el pes total en grams que representa tot el contingut d'una zona.
+- Calcular el pes total en grams que representa tot el contingut del magatzem sencer.
+- Determinar quin és el producte més pesat i el més lleuger entre els que hi ha en una zona.
+- Seleccionar aleatòriament un producte d'una zona per a fer un control d'estoc sorpresa.
+- Afegir noves zones al magatzem.
+- Eliminar una zona, sempre que no tinga ningun producte.
+
+Una vegada implementat el sistema, s'haurà de provar creant un magatzem diversos productes, distribuint-los per zones diferents i comprovant que totes les funcionalitats responen de manera correcta.
+
+<!--
+
 ## Apartat A – Classes simples amb atributs
 
-Aquests exercicis estan pensats per a començar creant **classes molt senzilles** (apartat A) **que després aniràs millorant i ampliant** (apartats B, C…) de manera que practiques i aprengues a poc a poc els aspectes fonamentals de la programació orientada a objectes. **El més important és que entengues què està passant**. Si no ho tens clar, "juga" amb el codi, fes proves ("a vore què succeeix si...”), revisa la teoria, etc. Si encara així no ho entens, pregunta en el fòrum (còpia-pega el codi si pertoca).
+Aquests exercicis estan pensats per a començar creant **classes molt senzilles** (apartat A) **que després aniràs millorant i ampliant** (apartats B, C…) de manera que practiques i aprengues a poc a poc els aspectes fonamentals de la programació orientada a objectes. **El més important és que entengues què està passant**. Si no ho tens clar, "juga" amb el codi, fes proves ("a vore què succeeix si..."), revisa la teoria, etc. Si encara així no ho entens, pregunta en el fòrum (còpia-pega el codi si pertoca).
 
 **En cada exercici deus crear un programa amb dues classes: una classe principal** (pots anomenar-la, per exemple, UD7_ProgramaPunt, segons l'exercici) que només contindrà la funció principal del programa (main), a més d'una altra classe (amb els seus atributs i mètodes) que utilitzaràs des de la classe principal per a fer proves sobre el seu funcionament.
 
@@ -18,7 +173,7 @@ En la funció principal del programa, instància 3 objectes de tipus Punt amb le
 
 Crea un programa amb una classe anomenada Persona que representarà les dades principals d'una persona: **dni**, **nom**, **cognoms** i **edat**.
 
-En la funció principal, instància dos objectes de la classe Persona. Després, demana per teclat les dades de totes dues persones (guarda-les en els objectes). Finalment, imprimeix dos missatges per pantalla (un per objecte) amb un text de l'estil "Ferrandis Luján Garcia amb DNI… és / no és major d'edat”.
+En la funció principal, instància dos objectes de la classe Persona. Després, demana per teclat les dades de totes dues persones (guarda-les en els objectes). Finalment, imprimeix dos missatges per pantalla (un per objecte) amb un text de l'estil "Ferrandis Luján Garcia amb DNI… és / no és major d'edat".
 
 ## Exercici A3 – Rectangle
 
@@ -30,7 +185,7 @@ En la funció principal del programa, instància 2 objectes Rectangle en (0,0)(5
 
 Crea un programa amb una classe anomenada Article amb els següents atributs: **nom**, **preu** (sense impostos), **IVA** (sempre serà 21) i **quantsQueden** (representa quants queden en el magatzem).
 
-En la funció principal, instància un objecte de la classe Article. Assigna-li valors a tots els seus atributs (els que vulgues) i mostra per pantalla un missatge de l'estil: **"Pijama – Preu: 10 € – Impost: 21% – PVP: 12,1 €”**
+En la funció principal, instància un objecte de la classe Article. Assigna-li valors a tots els seus atributs (els que vulgues) i mostra per pantalla un missatge de l'estil: **"Pijama – Preu: 10 € – Impost: 21% – PVP: 12,1 €"**
 
 (el PVP és el preu de venda al públic, és a dir, el preu amb impostos).
 
@@ -244,7 +399,7 @@ En aquest apartat has de modificar els programes de l'apartat anterior (o fes un
 
 Afig a la classe Punt els següents mètodes públics:
 
-- imprimeix() // Imprimeix per pantalla les coordenades. Exemple: "(7, -5)”
+- imprimeix() // Imprimeix per pantalla les coordenades. Exemple: "(7, -5)"
 - setXY(int x, int y) // Modifica totes dues coordenades. És com un setter doble.
 - desplaça(int dx, int dy) // Desplaça el punt la quantitat (dx,dy) indicada. Exemple: Si el punt (1,1) es desplaça (2,5) llavors estarà en (3,6).
 - distancia(Punt p) // Calcula i retorna la distància entre el propi objecte i un altre objecte (Punt p) que es passa com a paràmetre: distància entre dues coordenades.
@@ -255,7 +410,7 @@ Prova d'utilitzar aquests mètodes des del mètode principal per a comprovar el 
 
 Afig a la classe Persona els següents mètodes públics:
 
-- imprimeix() // Imprimeix la informació de l'objecte: "DNI:… Nom:… etc.”
+- imprimeix() // Imprimeix la informació de l'objecte: "DNI:… Nom:… etc."
 - esMajorEdat() // Retorna true si és major d'edat (false si no).
 - esJubilat() // Retorna true si té 65 anys o més (false si no).
 - diferenciaEdat(Persona p) // Retorna la diferència d'edat entre el propi objecte i p.
@@ -330,3 +485,5 @@ A Espanya existeixen tres tipus d'IVA segons la mena de producte:
 Aquests tres tipus d'IVA no poden variar i a cada article se li aplicarà un dels tres.
 
 Raona quins canvis seria necessari realitzar a la classe Article i implementa'ls.
+
+-->
