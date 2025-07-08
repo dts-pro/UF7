@@ -1,4 +1,4 @@
-# UF01. Fonaments de Programació1
+# UF07. Programació Orientada a Objectes I
 
 ::: tip Informació del curs
 **Professors:** Guillermo Garrido Portes / David Tur Sanmateu
