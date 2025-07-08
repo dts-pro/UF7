@@ -6,7 +6,7 @@ El constructor s'encarrega d'inicialitzar els atributs de la classe i de garanti
 
 >[!IMPORTANT] <strong>IMPORTANT!</strong>
 >
->Un **constructor** és un mètode especial d'una classe que s’executa automàticament quan es crea un objecte. El seu objectiu és **inicialitzar l’objecte** i preparar-lo per a ser utilitzat.
+>Un **constructor** és un mètode especial d'una classe que s'executa automàticament quan es crea un objecte. El seu objectiu és **inicialitzar l'objecte** i preparar-lo per a ser utilitzat.
 
 :::: tabs
 === Java
@@ -14,10 +14,10 @@ El constructor s'encarrega d'inicialitzar els atributs de la classe i de garanti
 En Java, un constructor no és més que **un mètode que té el mateix nom que la classe**. En general, quan es crea una instància d'una classe, no sempre es desitja passar els paràmetres d'inicialització en construir-la, per això existeix un tipus especial de constructors, que són els anomenats **constructors per defecte**.
 
 ::: warning ATENCIÓ
-Un constructor per defecte inicialitza les variables d’instància amb **valors predeterminats**: `0` per a valors numèrics, `false` per a booleans, i `null` per a referències d’objectes.
+Un constructor per defecte inicialitza les variables d'instància amb **valors predeterminats**: `0` per a valors numèrics, `false` per a booleans, i `null` per a referències d'objectes.
 :::
 
-Tanmateix, **si es defineix qualsevol constructor**, Java **ja no afegeix** automàticament el constructor per defecte. Si es vol continuar disposant d’un constructor sense paràmetres, **cal definir-lo explícitament**.
+Tanmateix, **si es defineix qualsevol constructor**, Java **ja no afegeix** automàticament el constructor per defecte. Si es vol continuar disposant d'un constructor sense paràmetres, **cal definir-lo explícitament**.
 
 ::: tabs
 == Exemple 1
